@@ -1,0 +1,77 @@
+.root { 
+  -fx-background-image: url(green.jpg);
+  -fx-padding: 10;
+}
+
+.root > * {
+  -fx-background-color: white;
+}
+
+Label {
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333333;
+}
+
+Text {
+  -fx-fill: #757575;
+}
+
+.heading {
+  -fx-font-size: 50px;
+  -fx-font-weight: bold;
+  -fx-fill: #6c0e0e;
+  -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+.big {
+  -fx-font-size: 22px;
+  -fx-fill: #455a64;
+}
+
+#message {
+  -fx-fill: FIREBRICK;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );  
+}
+
+.button {
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-background-color: #6c0e0e;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+  -fx-background-color: #ff7752;
+}
+
+.header {
+  -fx-padding: 15px;
+}
+
+.body {
+  -fx-padding: 10;
+  -fx-background-color: #ffffff;
+}
+
+.footer {
+  -fx-padding: 15px;
+}
+
+GridPane.table {
+  -fx-background-color: white;
+  -fx-padding: 15px;
+}
+
+.table-row-cell:selected .table-cell {
+  -fx-background-color: #99ddff;
+}
+
+.table-cell {
+  -fx-alignment: center;
+}
+
+*:focused {
+  -fx-focus-color: #11a141;
+}

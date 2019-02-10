@@ -1,0 +1,12 @@
+[y] The Main menu window is at least partially done.
+[y] The Main menu window is done.
+[y] The Serve customer window is at least partially done.
+[y] The Serve customer window is done.
+[y] The Create pizza window is at least partially done.
+[y] The Create pizza window is done.
+[y] The Add customer window is at least partially done.
+[y] The Add customer window is done.
+[y] The Income report window is at least partially done.
+[y] The Income report window is done.
+[y] The Bonus feature is mostly done.
+[y] The Bonus feature is done.

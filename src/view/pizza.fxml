@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
+<?import view.PizzaView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PizzaController" alignment="center" spacing="10" 
+        styleClass="root" prefWidth = "800" prefHeight = "600" >    
+    
+    <HBox  styleClass = "header" alignment = "center" spacing = "10" > <!-- Header box -->
+        <ImageView>
+            <image>
+                <Image url="@pizzeria.png"/>
+            </image>
+        </ImageView>
+    
+        <Text text = "Create pizza" styleClass = "heading" />
+    
+    </HBox>
+    <VBox spacing = "10" alignment = "center" styleClass = "body">
+        <HBox spacing = "10" alignment = "center" > <!-- body -->
+    
+            <VBox spacing = "10" alignment = "center_left" > <!-- left side -->
+                <Label text = "Available" styleClass = "big" />
+                <ListView fx:id = "availableListView" prefWidth = "200" prefHeight = "300">
+                    
+                </ListView>
+                
+                <HBox spacing = "10" alignment = "center_left"> <!-- price -->
+                    <Label text = "Price:"/>
+                    <Text fx:id = "totalText" text = ""/>
+                </HBox>
+            </VBox> 
+            
+            <VBox spacing = "10" alignment = "center"> <!-- middle side -->
+                <Button fx:id= "itemForwardButton" text = "->" disable = "true" onAction = "#itemForwardButtonPressed" />
+                <Button fx:id = "itemBackButton" text = "" disable = "true" onAction = "#itemBackButtonPressed" /> <!-- text cant be set because it closes the tag -->
+            </VBox>
+       
+            <VBox spacing = "10" > <!-- right side -->
+                <Label text = "Selected" styleClass = "big" />
+                <ListView fx:id = "selectedListView" prefWidth = "200" prefHeight = "300">
+                    <placeholder>
+                        <Text text = "No ingredients on pizza" />
+                    </placeholder>
+                </ListView>
+                <Label text = " " /> <!-- placeholder ensures both listviews are same height -->
+            </VBox> 
+            
+            <PizzaView fx:id = "pizzaView" prefWidth = "250" prefHeight = "250"> <!-- PIZZA VIEW -->
+            </PizzaView> 
+            
+        </HBox>
+        
+        <Text fx:id= "changingTextPrompt" text = " " id = "message" /> <!-- changing text -->
+        
+    </VBox>
+    
+    <HBox styleClass = "footer" alignment = "center" spacing = "10" > <!-- Footer Box -->
+        <Button text = "Cancel" onAction = "#hanldeCancelPressed" />
+        <Button fx:id = "createButton" text = "Create" disable = "true" onAction = "#hanldeCreatePressed" />
+    </HBox>
+    
+    <stylesheets><URL value="@style.css"/></stylesheets>
+</VBox>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import java.net.URL?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ReportController" alignment="center" spacing="10" 
+      styleClass="root" prefWidth = "700" prefHeight = "600" >
+    
+    <HBox  styleClass = "header" alignment = "center" spacing = "10" > <!-- Header box -->
+        <ImageView>
+            <image>
+                <Image url="@pizzeria.png"/>
+            </image>
+        </ImageView>
+    
+        <Text text = "Income report" styleClass = "heading" />
+    
+    </HBox>
+    
+    <VBox styleClass = "body" spacing = "10" >  <!-- Body -->
+        <TableView fx:id = "reportTableView">
+            <!-- PUT COLUMNS AND DATA HERE! -->
+            
+            <columns>
+                <TableColumn text = "Ingredient" fx:id = "ingredientColumn" />
+                                   
+                <TableColumn text = "Price" fx:id = "priceColumn" />  
+
+                <TableColumn text = "Sold" fx:id = "soldColumn" />
+                
+                <TableColumn text = "Income" fx:id = "incomeColumn" />
+            </columns>
+        </TableView>
+        
+        <HBox spacing = "10" >
+            <Label text="Total income:" />
+            <Text fx:id="totalText" text = "" /> <!-- this is the total -->
+        </HBox>
+        
+    </VBox>
+    
+    <HBox styleClass = "footer" alignment = "center"> <!-- Footer Box -->
+        <Button text = "Close" onAction = "#handleCancelPressed" />
+    </HBox>
+    <stylesheets><URL value="@style.css"/></stylesheets>
+</VBox>
